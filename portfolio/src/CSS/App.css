@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* ------------- GLOBAL CONFIGS -----------*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --branco:#F8F8F8;
+    --cinzaClaro:#D2D2D2;
+    --cinzaEscuro: #303030;
+    --preto: #191919;
+    --preto2: #232323;
+    --verm1: #802424;
+    --verm2: #FF4747;
+    --verm3: #FF9494;
+    --mono:'IBM Plex Mono', monospace;
+}
+
+section{
+    height: 100vh;
+    background-color: brown;
+    color: var(--preto);
+    font-family: 'Open Sans', sans-serif;
+    transition: 0.5s ease;
+}
+
+section.light{
+    background-color: var(--branco);
+    color: var(--preto);
+    transition: 0.5s ease;
+}
+
+section.dark{
+    background-color: var(--preto);
+    color: var(--branco);
+    transition: 0.5s ease;
+}
+
+.lightTheme{
+    background-color: var(--branco);
+    color: var(--preto);
+    transition: 0.5s ease;
+}
+
+.darkTheme{
+    background-color: var(--preto);
+    color: var(--branco);
+    transition: 0.5s ease;
+}
+
+.dark{
+    color: var(--preto);
+}
+
+/* ------------- NAVBAR -----------*/
+
+nav{
+    background-color: var(--branco);
+    height: 70px;
+    width: 100%;
+    box-shadow: 7px 5px 0px rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    
+}
+
+
+
+nav.dark{
+    background-color: var(--preto2);
+    box-shadow: 5px 5px 0px var(--preto);
+    transition: 0.5s ease;
+}
+
+/* NAVBAR LINKS*/
+
+nav a {
+    text-decoration: none;
+    color: var(--preto);
+    padding-left: 40px;
+    font-size: 14px;
+    user-select: none;
+    text-shadow: 10px 17px 0px rgba(0, 0, 0, 0.199);
+    transition: 0.5s ease;
+}
+
+nav a:hover{
+    text-shadow: -10px -17px 0px rgba(0, 0, 0, 0.199);
+    transition: 0.5s ease;
+}
+
+nav a:hover {  
+    color: var(--verm2); 
+    font-size: 16px;
+    font-weight: bolder;
+   
+}
+
+nav a.dark{
+    color: var(--branco);
+    text-shadow: -10px 17px 0px rgba(255, 255, 255, 0.199);
+}
+
+
+
+nav a.dark:hover {  
+    color: var(--verm1); 
+    font-size: 16px;
+    font-weight: bolder;
+    text-shadow: 10px -17px 0px rgba(255, 255, 255, 0.199);
+    transition: 0.5s ease;
+}
+
+/* ------------- SWITCH BUTTON DARKMODE -----------*/
+
+.switches--container{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.switch--container{
+    margin-left: 10px;
+    height: 100%;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch{
+    position: relative;
+
+    height: 40px;
+    width: 80px;
+    background-color: var(--cinzaClaro);
+    border-radius: 0;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.226);
+    transition: 0.5s ease;
+    
+}
+
+.switch--dark{
+    background-color: var(--cinzaEscuro);
+    box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.507);
+    transition: 0.5s ease;
+}
+
+.switch--button{
+    position: absolute;
+    height: 30px;
+    width: 50px;
+    top: 5px;
+    left: 5px;
+    background-color: var(--branco);
+    border-radius: 0px;
+    transition: 0.5s ease;
+    font-size: 12px;
+    font-weight: bolder;
+    color: var(--preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    
+    box-shadow: 3px 1px 2px rgba(0, 0, 0, 0.226);
+}
+
+.switch--button:hover{
+    transform: scale(1.025);
+    box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.226);
+}
+
+.switch--button--dark{
+    background-color: var(--preto2);
+    color: var(--branco);
+    box-shadow: -3px 1px 2px rgba(0, 0, 0, 0.507);
+    transition: 0.5s ease;
+}
+
+.switch--button--dark:hover{
+    transform: scale(1.025);
+    box-shadow: -4px 1px 2px rgba(0, 0, 0, 0.507);
+}
+
+.switch--button--state{
+    left:25px;
+}
+
+/* ------------- TITLE -----------*/
+
+.title{
+    padding: 9% 0px 10px 50px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title h3 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.title h2 {
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.title h1 {
+    font-size: 70px;
+}
+
+.title button {
+    position: relative;
+    background-color: var(--verm1);
+    background-image: linear-gradient(to right, var(--verm3), var(--verm2));
+    color: var(--branco);
+    font-size: 18px;
+    height: 40px;
+    border-radius: 0px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px black;
+    transition: 0.5s ease;
+    margin-right: 20px;
+}
+
+.title button.dark {
+    box-shadow: -4px 4px 0px var(--branco);
+    background-image: linear-gradient(to left, var(--verm1), var(--verm2));
+}
+
+.title button:hover {
+    transform: translate(4px,4px);
+    box-shadow: none;
+    transition: 0.5s ease;
+}
+
+.title button.dark:hover {
+    transform: translate(-4px,4px);
+    box-shadow: none;
+    transition: 0.5s  ease;
+}
+
+.title button:active {
+    transform: translate(8px,8px) scale(0.98);
+    box-shadow: inset 4px 4px 10px black;
+    transition: 0.5s ease;
+}
+
+.title button.dark:active {
+    transform: translate(8px,8px);
+    box-shadow: inset 4px 4px 10px black;
+    transition: 0.5s ease;
+}
+
+.download--resume--container{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.links svg{
+    transition: 0.5s ease;
+    fill: var(--preto)
+}
+
+.links svg.dark{
+    fill: var(--branco)
+}
+
+.links svg:hover{
+    fill: var(--verm2);
+    transform: scale(1.2);
+    transition: 0.5s ease;
+}
+
+.links svg.dark:hover{
+    fill: var(--verm1);
+    transform: scale(1.2);
+    transition: 0.5s ease;
+}
+
+
+
+.links{
+    margin-top: 10px;
+}
+
+/* ------------- Title Circle ----------- */
+
+.custom-shape-divider-bottom-1671473214 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1671473214 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 251px;
+}
+
+.custom-shape-divider-bottom-1671473214 .shape-fill {
+    fill: var(--verm2);
+}
+
+.custom-shape-divider-top-1671473366 {
+    position: absolute;
+    bottom: -251px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1671473366 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 251px;
+}
+
+.custom-shape-divider-top-1671473366 .shape-fill {
+    fill: var(--verm2);
+}
+
+
+/* --------- DIVISOR ----------------- */
+
+#Divisor--container{
+    width: 100%;
+    transform: scale(19.1);
+}
+
+#Med{
+    transform: translateX(0.5px);
+    
+}
+
+#Dark{
+    transform: translateX(1px);
+}
+
+#Med-top, #Med-bottom{
+    width: 99px;
+    height: 2px;
+    fill: var(--branco)
+}
+
+#Dark-top, #Dark-bottom{
+    width: 98px;
+    height: 2px;
+    fill: var(--verm2)
+}
+
+.sec-2 img{
+  background-color: #191919;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.sec-2{
+    font-family: var(--mono);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #191919;
+    position: relative;
+}
+
+.sec-2 h3{
+    padding-top: 150px;
+    font-size: 40px;
+    transform: rotate(0deg);
+}
+
+.sec-2 h2{
+    padding-top: 150px;
+    font-size: 40px;
+    position: absolute;
+    top: 200px;
+    left: 250px;
+    transform: rotate(0deg);
+}
+
+.sec-2 h2.Javascript{
+    padding-top: 150px;
+    font-size: 40px;
+    position: absolute;
+    top: 200px;
+    left: 250px;
+    transform: rotate(0deg);
+}
+
+.sec-2 h2.Javascript{
+    padding-top: 150px;
+    font-size: 40px;
+    position: absolute;
+    top: 200px;
+    left: 250px;
+    transform: rotate(0deg);
+}
+
+.sec-2 h2.React{
+    padding-top: 150px;
+    font-size: 40px;
+    position: absolute;
+    top: 300px;
+    left: 250px;
+    transform: rotate(0deg);
+}
+    
+
+
+
+
+
+
+
+/* .switch--container{
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container--toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;  
+}
+
+.toggle--button--container{
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 20px;
+    background-color: #c7c7c7;
+    border-radius: 30px;
+}
+
+.toggle--dark{
+    background-color: #303030; 
+}
+
+.toggle--button{
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 30px;
+    height: 15px;
+    background-color: rgb(150, 13, 13);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 8px;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+
+.toggle--button--dark{
+    left: 17.5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.text{
+    position: absolute;
+    left: 95px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+} */
+

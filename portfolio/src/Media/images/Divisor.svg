@@ -1,0 +1,19 @@
+<svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Divisor" clip-path="url(#clip0_1_2)">
+<rect width="100" height="18" fill="#191919"/>
+<rect id="Rectangle 1" y="4" width="100" height="9" fill="#802424"/>
+<g id="Med">
+<rect id="Med-top" y="2" width="100" height="5" />
+<rect id="Med-bottom" y="11" width="100" height="5" fill="#FF4747"/>
+</g>
+<g id="Dark">
+<rect id="Dark-top" width="100" height="5" fill="#802424"/>
+<rect id="Dark-bottom" y="13" width="100" height="5" fill="#802424"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1_2">
+<rect width="100" height="18" fill="white"/>
+</clipPath>
+</defs>
+</svg>
